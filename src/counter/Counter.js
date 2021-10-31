@@ -12,10 +12,12 @@ function Counter() {
       <button data-testid="add-btn">+</button>
       <input
         type="number"
-        name=""
         value={inputValue}
         data-testid="input"
         className="text-center"
+        onChange={(e) => {
+          setInputValue(e.target.value);
+        }}
       />
       <button data-testid="subtract-btn">-</button>
     </div>
